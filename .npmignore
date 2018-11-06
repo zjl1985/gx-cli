@@ -1,3 +1,4 @@
 # Ignores TypeScript files, but keeps definitions.
-src/gx-cli/*.ts
+*.ts
 !*.d.ts
+!src/*/files/**
