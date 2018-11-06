@@ -1,7 +1,12 @@
 {
   "name": "gaoxin-cli",
-  "version": "0.0.2",
-  "description": "A blank schematics",
+  "version": "0.0.4",
+  "description": "高信ng的脚手架",
+  "author": "zhangjunlong<zjl198544@163.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://121.42.62.71:13530/xinhaiplatform/gx-cli.git"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
@@ -9,7 +14,6 @@
   "keywords": [
     "schematics"
   ],
-  "author": "",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
