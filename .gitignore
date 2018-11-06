@@ -1,7 +1,7 @@
 # Outputs
-src/**/*.js
-src/**/*.js.map
-src/**/*.d.ts
+src/gx-cli/*.js
+src/gx-cli/*.js.map
+src/gx-cli/*.d.ts
 
 # IDEs
 .idea/
