@@ -36,8 +36,8 @@ export class StartupService {
     // https://github.com/angular/angular/issues/15088
     return new Promise((resolve, reject) => {
       zip(
-        this.httpClient.get(`assets/tmp/i18n/zh-CN.json`),
-        this.httpClient.get(`assets/tmp/app-data.json`),
+        this.httpClient.get(`assets/resource/i18n/zh-CN.json`),
+        this.httpClient.get(`assets/resource/app-data.json`),
       )
         .pipe(
           // 接收其他拦截器后产生的异常消息

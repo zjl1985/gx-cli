@@ -44,11 +44,11 @@ export function delonAuthConfig(): DelonAuthConfig {
   imports: [
     NgZorroAntdModule.forRoot(),
     AlainThemeModule.forRoot(),
-    DelonABCModule.forRoot(),
-    DelonAuthModule.forRoot(),
-    DelonACLModule.forRoot(),
-    DelonCacheModule.forRoot(),
-    DelonUtilModule.forRoot(),
+    DelonABCModule,
+    DelonAuthModule,
+    DelonACLModule,
+    DelonCacheModule,
+    DelonUtilModule,
     // mock
     ...MOCKMODULE,
   ],

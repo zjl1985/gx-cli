@@ -33,7 +33,7 @@ import { JsonSchemaModule } from '@shared/json-schema/json-schema.module';
 
 // 加载i18n语言文件
 export function I18nHttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http, `assets/tmp/i18n/`, '.json');
+  return new TranslateHttpLoader(http, `assets/resource/i18n/`, '.json');
 }
 export function StartupServiceFactory(
   startupService: StartupService,
