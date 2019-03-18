@@ -4,7 +4,8 @@ import {
   url,
   mergeWith,
   template,
-  move
+  move,
+  branchAndMerge,
 } from "@angular-devkit/schematics";
 import { schemaOptions } from "./schema";
 import { strings } from "@angular-devkit/core";
@@ -13,14 +14,34 @@ import { strings } from "@angular-devkit/core";
 // per file.
 export function gxCli(options: schemaOptions): Rule {
   const path = options.name;
-  return mergeWith(
-    apply(url("./files"), [
-      template({
-        utils: strings,
-        ...options,
-        dot: "."
-      }),
-      move(`./${path}`)
-    ])
+  let urlPath;
+  switch (options.type) {
+    case "ng":
+      urlPath = "../ng-new";
+      break;
+    case "java":
+      urlPath = "../java";
+      break;
+    case "ionic3":
+      urlPath = "../ionic3";
+      break;
+    case "ionic4":
+      urlPath = "../ionic4";
+      break;
+    default:
+      urlPath = "../ng-new";
+      break;
+  }
+  return branchAndMerge(
+    mergeWith(
+      apply(url(urlPath), [
+        template({
+          ...strings,
+          ...options,
+          dot: ".",
+        }),
+        move(`./${path}`),
+      ]),
+    ),
   );
 }

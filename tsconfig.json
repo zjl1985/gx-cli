@@ -29,6 +29,9 @@
     "src/**/*"
   ],
   "exclude": [
-    "src/*/files/**/*"
+    "src/ionic3/**",
+    "src/java/**",
+    "src/ng-new/**",
+    "src/ionic4/**"
   ]
 }
