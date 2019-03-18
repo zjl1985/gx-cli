@@ -1,0 +1,6 @@
+<ion-tabs>
+  <ion-tab *ngFor="let nav of navs"
+           [tabIcon]="nav.menuIcon"
+           [tabTitle]="nav.name"
+           [root]="nav.url"></ion-tab>
+</ion-tabs>

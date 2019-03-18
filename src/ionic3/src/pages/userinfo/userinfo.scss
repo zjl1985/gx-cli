@@ -1,0 +1,16 @@
+userinfo-page {
+    .logout-button {
+        padding: 20px 50px;
+        button {
+            font-size: 1.4rem;
+            border-radius: 10px;
+            background: rgba(73, 179, 240, 1);
+            background: -moz-linear-gradient(left, rgba(73, 179, 240, 1) 0%, rgba(47, 128, 237, 1) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(47, 128, 237, 1)), color-stop(100%, rgba(73, 179, 240, 1)));
+            background: -webkit-linear-gradient(left, rgba(73, 179, 240, 1) 0%, rgba(47, 128, 237, 1) 100%);
+            background: -o-linear-gradient(left, rgba(73, 179, 240, 1) 0%, rgba(47, 128, 237, 1) 100%);
+            background: -ms-linear-gradient(left, rgba(73, 179, 240, 1) 0%, rgba(47, 128, 237, 1) 100%);
+            background: linear-gradient(to right, rgba(73, 179, 240, 1) 0%, rgba(47, 128, 237, 1) 100%);
+        }
+    }
+}

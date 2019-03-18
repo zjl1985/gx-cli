@@ -1,0 +1,21 @@
+<ion-content>
+    <img src="assets/imgs/login-bg.png" width="100%" />
+    <div class="login-info">
+        <ion-item>
+            <ion-label>
+                <ion-icon name="ios-person-outline"></ion-icon>
+            </ion-label>
+            <ion-input type="text" placeholder="请输入用户名" #username value="admin"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>
+                <ion-icon name="ios-lock-outline"></ion-icon>
+            </ion-label>
+            <ion-input type="password" placeholder="请输入密码" #password value="111111"></ion-input>
+        </ion-item>
+        <div class="login-button">
+            <button ion-button block (click)="logIn(username, password)">
+                        登录
+                      </button></div>
+    </div>
+</ion-content>

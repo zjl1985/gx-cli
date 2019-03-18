@@ -1,0 +1,13 @@
+{
+  "name": "water-service-app",
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {
+      "path": "/",
+      "proxyUrl": "http://192.168.1.5:8088"
+    }
+  ],
+  "type": "ionic-angular"
+}
