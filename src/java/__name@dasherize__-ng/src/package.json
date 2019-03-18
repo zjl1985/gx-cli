@@ -1,0 +1,24 @@
+{
+    "name": "<%= dasherize(name) %>",
+    "version": "1.0.15",
+    "engines": {
+      "node": ">= 8.10.0",
+      "npm": ">= 3.0.0"
+    },
+    "description": "高信基础功能包",
+    "author": "zhangjunlong<zjl1985444@163.com>",
+    "peerDependencies": {
+      "@angular/common": "~7.2.0",
+      "@angular/core": "~7.2.0",
+      "@delon/abc": "^7.0.2",
+      "@delon/acl": "^7.0.2",
+      "@delon/auth": "^7.0.2",
+      "@delon/cache": "^7.0.2",
+      "@delon/form": "^7.0.2",
+      "@delon/mock": "^7.0.2",
+      "@delon/theme": "^7.0.2",
+      "@delon/util": "^7.0.2",
+      "ng-zorro-antd": "^7.0.2",
+      "ng-alain": "^7.0.2"
+    }
+  }
