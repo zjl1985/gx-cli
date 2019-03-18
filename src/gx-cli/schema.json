@@ -29,6 +29,10 @@
                         "label": "ng"
                     },
                     {
+                        "value": "ionic3",
+                        "label": "ionic3"
+                    },
+                    {
                         "value": "ionic4",
                         "label": "ionic4"
                     }

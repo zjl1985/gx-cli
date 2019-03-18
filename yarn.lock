@@ -21,10 +21,10 @@
     "@angular-devkit/core" "7.3.6"
     rxjs "6.3.3"
 
-"@types/jasmine@^2.6.0":
-  version "2.8.16"
-  resolved "http://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-2.8.16.tgz#a6cb24b1149d65293bd616923500014838e14e7d"
-  integrity sha1-pssksRSdZSk71haSNQABSDjhTn0=
+"@types/jasmine@^3.3.10":
+  version "3.3.10"
+  resolved "http://registry.npm.taobao.org/@types/jasmine/download/@types/jasmine-3.3.10.tgz#5b90c8e74246487e8810100ddc2547ffc94d31f6"
+  integrity sha1-W5DI50JGSH6IEBAN3CVH/8lNMfY=
 
 "@types/node@^8.0.31":
   version "8.10.44"
@@ -295,11 +295,6 @@ detect-libc@^1.0.2:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/detect-libc/download/detect-libc-1.0.3.tgz#fa137c4bd698edf55cd5cd02ac559f91a4c4ba9b"
   integrity sha1-+hN8S9aY7fVc1c0CrFWfkaTEups=
-
-exit@^0.1.2:
-  version "0.1.2"
-  resolved "http://registry.npm.taobao.org/exit/download/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
-  integrity sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=
 
 expand-brackets@^2.1.4:
   version "2.1.4"
@@ -644,19 +639,18 @@ isobject@^3.0.0, isobject@^3.0.1:
   resolved "http://registry.npm.taobao.org/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha1-TkMekrEalzFjaqH5yNHMvP2reN8=
 
-jasmine-core@~2.99.0:
-  version "2.99.1"
-  resolved "http://registry.npm.taobao.org/jasmine-core/download/jasmine-core-2.99.1.tgz#e6400df1e6b56e130b61c4bcd093daa7f6e8ca15"
-  integrity sha1-5kAN8ea1bhMLYcS80JPap/boyhU=
+jasmine-core@~3.3.0:
+  version "3.3.0"
+  resolved "http://registry.npm.taobao.org/jasmine-core/download/jasmine-core-3.3.0.tgz#dea1cdc634bc93c7e0d4ad27185df30fa971b10e"
+  integrity sha1-3qHNxjS8k8fg1K0nGF3zD6lxsQ4=
 
-jasmine@^2.8.0:
-  version "2.99.0"
-  resolved "http://registry.npm.taobao.org/jasmine/download/jasmine-2.99.0.tgz#8ca72d102e639b867c6489856e0e18a9c7aa42b7"
-  integrity sha1-jKctEC5jm4Z8ZImFbg4YqceqQrc=
+jasmine@^3.3.1:
+  version "3.3.1"
+  resolved "http://registry.npm.taobao.org/jasmine/download/jasmine-3.3.1.tgz#d61bb1dd8888859bd11ea83074a78ee13d949905"
+  integrity sha1-1hux3YiIhZvRHqgwdKeO4T2UmQU=
   dependencies:
-    exit "^0.1.2"
     glob "^7.0.6"
-    jasmine-core "~2.99.0"
+    jasmine-core "~3.3.0"
 
 json-schema-traverse@^0.4.1:
   version "0.4.1"
