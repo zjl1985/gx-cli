@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>登陆</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content class="container">
+    <ion-item>
+        <ion-label>
+            <ion-icon name="person"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="请输入用户名" #username></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>
+            <ion-icon name="lock"></ion-icon>
+        </ion-label>
+        <ion-input type="password" placeholder="请输入密码" #password></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="logIn(username, password)">登录</ion-button>
+</ion-content>
