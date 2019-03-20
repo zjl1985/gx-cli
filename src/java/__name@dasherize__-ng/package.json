@@ -21,7 +21,7 @@
     "ng": "ng",
     "start": "ng serve -o --proxy-config proxy.config.json",
     "hmr": "ng serve -c=hmr -o --proxy-config proxy.config.json",
-    "build": "ng build  --base-href=/ngdemo --prod",
+    "build": "ng build  --base-href=. --prod --build-optimizer",
     "analyze": "ng build --prod --build-optimizer --stats-json",
     "lint": "npm run lint:ts && npm run lint:style",
     "lint:ts": "tslint -p src/tsconfig.app.json -c tslint.json 'src/**/*.ts'",
@@ -32,7 +32,7 @@
     "test": "ng test --watch",
     "test-coverage": "ng test --code-coverage --watch=false",
     "package": "ng run my-module:build",
-    "pub": "npm --registry http://172.72.100.190:4873 publish dist"
+    "pub": "npm --registry http://172.72.100.37:13420/repository/gaoxin-npm/ publish dist"
   },
   "browserslist": [
     "last 2 versions",
