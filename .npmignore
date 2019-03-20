@@ -1,4 +1,7 @@
 # Ignores TypeScript files, but keeps definitions.
 *.ts
 !*.d.ts
-!src/*/files/**
+!/src/ng-new/**
+!/src/java/**
+!/src/ionic4/**
+!/src/ionic3/**
