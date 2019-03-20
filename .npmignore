@@ -1,5 +1,6 @@
 # Ignores TypeScript files, but keeps definitions.
 *.ts
+*.tgz
 !*.d.ts
 !/src/ng-new/**
 !/src/java/**

@@ -19,3 +19,5 @@ package-lock.json
 .DS_Store
 
 .project
+
+*.tgz
