@@ -4,6 +4,10 @@
 
 安装最新的angular-cli,本工具依赖版本必须大于7.2.3
 
+`npm install -g nrm`
+
+`nrm use taobao`
+
 `npm install -g @angular/cli`
 
 ## 先安装
