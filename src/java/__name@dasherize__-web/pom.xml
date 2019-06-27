@@ -180,6 +180,7 @@
                 <version>2.4</version>
                 <configuration>
                     <packagingExcludes>**/properties/**</packagingExcludes>
+                    <outputDirectory>${project.basedir}/../release/</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
