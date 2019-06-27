@@ -124,7 +124,7 @@
         <dependency>
             <groupId>com.xinhai</groupId>
             <artifactId>basic-module-web</artifactId>
-            <version>3.0.0</version>
+            <version>3.0.3</version>
             <type>war</type>
             <scope>provided</scope>
         </dependency>
@@ -138,7 +138,14 @@
         <dependency>
             <groupId>com.gaoxin</groupId>
             <artifactId>data-monitoring-web</artifactId>
-            <version>2.0.5</version>
+            <version>2.1.0</version>
+            <type>war</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.xinhai</groupId>
+            <artifactId>data-service-web</artifactId>
+            <version>2.1.0</version>
             <type>war</type>
             <scope>provided</scope>
         </dependency>
