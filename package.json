@@ -1,11 +1,11 @@
 {
   "name": "gaoxin-cli",
-  "version": "1.0.0-rc.11",
+  "version": "1.1.0",
   "description": "高信ng的脚手架",
   "author": "zhangjunlong<zjl198544@163.com>",
   "repository": {
     "type": "git",
-    "url": "http://121.42.62.71:13530/xinhaiplatform/gx-cli.git"
+    "url": "http://172.72.100.37:13530/xinhaiplatform/gx-cli.git"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
