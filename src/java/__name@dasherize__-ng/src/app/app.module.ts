@@ -25,9 +25,6 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ALAIN_I18N_TOKEN } from '@delon/theme';
 import { I18NService } from '@core/i18n/i18n.service';
-// third
-import { UEditorModule } from 'ngx-ueditor';
-import { NgxTinymceModule } from 'ngx-tinymce';
 // @delon/form: JSON Schema form
 import { JsonSchemaModule } from '@shared/json-schema/json-schema.module';
 
@@ -60,20 +57,6 @@ export function StartupServiceFactory(
         useFactory: I18nHttpLoaderFactory,
         deps: [HttpClient],
       },
-    }),
-    // thirds
-    UEditorModule.forRoot({
-      // **注：** 建议使用本地路径；以下为了减少 ng-alain 脚手架的包体大小引用了CDN，可能会有部分功能受影响
-      js: [
-        `//apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.config.js`,
-        `//apps.bdimg.com/libs/ueditor/1.4.3.1/ueditor.all.min.js`,
-      ],
-      options: {
-        UEDITOR_HOME_URL: `//apps.bdimg.com/libs/ueditor/1.4.3.1/`,
-      },
-    }),
-    NgxTinymceModule.forRoot({
-      baseURL: '//cdn.bootcss.com/tinymce/4.7.4/',
     }),
     // JSON-Schema form
     JsonSchemaModule,

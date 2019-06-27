@@ -11,6 +11,8 @@ import {
 import { ReuseTabService } from '@delon/abc';
 import { StartupService } from '@core/startup/startup.service';
 import { HttpClient } from '@angular/common/http';
+import { GlobalConfigService } from 'app/routes/global-config.service';
+
 @Component({
   selector: 'passport-login',
   templateUrl: './login.component.html',
@@ -39,7 +41,8 @@ export class UserLoginComponent implements OnDestroy {
     @Inject(ReuseTabService)
     private reuseTabService: ReuseTabService,
     @Inject(DA_SERVICE_TOKEN) private tokenService: TokenService,
-    private startupSrv: StartupService
+    private startupSrv: StartupService,
+    private gcs: GlobalConfigService,
   ) {
     this.form = fb.group({
       userName: [null, [Validators.required]],
@@ -107,7 +110,7 @@ export class UserLoginComponent implements OnDestroy {
     }
     // mock http
     this.loading = true;
-    this.http.get(`/basic/xinhai/login/${this.userName.value}/${this.password.value}`).subscribe((result: any) => {
+    this.http.get(`${this.gcs.globalPath}/xinhai/login/${this.userName.value}/${this.password.value}`).subscribe((result: any) => {
       this.loading = false;
       this.reuseTabService.clear();
       if (result.failed === false) {

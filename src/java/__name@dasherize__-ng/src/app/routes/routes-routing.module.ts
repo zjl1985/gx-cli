@@ -22,7 +22,18 @@ const routes: Routes = [
     path: "",
     component: LayoutDefaultComponent,
     children: [
-      //{path: 'datacard', component: DataCardDemoComponent},
+      {
+        path: 'basic-model',
+        loadChildren: './basic-model/basic-model.module#BasicModelModule',
+      },
+      {
+        path: 'basic',
+        loadChildren: './basic-module/basic-module.module#BasicModuleModule',
+      },
+      {
+        path: 'gxlinechart',
+        loadChildren: './gaoxin-linechart/gaoxin-linechart.module#GaoxinLinechartModule',
+      },
     ],
   },
   // passport

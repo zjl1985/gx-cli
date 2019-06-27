@@ -1,14 +1,21 @@
-<!--<div class="logo">  <a [routerLink]="['/']">   <img class="expanded" src="./assets/logo-full.svg" alt="{{settings.app.name}}" style="max-height:40px;" />   <img class="collapsed" src="./assets/logo.svg" alt="{{settings.app.name}}" style="max-height:30px;" />  </a> </div>-->
+<!-- <div class="alain-default__header-logo">
+  <a [routerLink]="['/']" class="alain-default__header-logo-link">
+    <img class="alain-default__header-logo-expanded" src="./assets/img/logo.png" alt="{{settings.app.name}}"
+      style="max-height:40px;" />
+    <img class="alain-default__header-logo-collapsed" src="./assets/img/logo.png" alt="{{settings.app.name}}"
+      style="max-height:30px;" />
+  </a>
+</div> -->
 <div class="alain-default__nav-wrap">
   <ul class="alain-default__nav">
     <!--Menu-->
     <li>
       <div class="alain-default__nav-item" (click)="toggleCollapsedSidebar()">
-        <i class="anticon anticon-menu-{{settings.layout.collapsed ? 'unfold' : 'fold'}}"></i>
+        <i nz-icon type="menu-{{settings.layout.collapsed ? 'unfold' : 'fold'}}"></i>
       </div>
     </li>
     <li>
-      <a [routerLink]="['/']" class="logo-title">重点用能在线监测企业端</a>
+      <a [routerLink]="['/']" class="logo-title">青岛高信</a>
     </li>
   </ul>
   <ul class="alain-default__nav">
@@ -18,7 +25,7 @@
     <li class="hidden-mobile">
       <nz-dropdown nzTrigger="click" nzPlacement="bottomRight">
         <div class="alain-default__nav-item" nz-dropdown>
-          <i class="anticon anticon-setting"></i>
+          <i nz-icon type="setting"></i>
         </div>
         <div nz-menu style="width:200px;">
           <div nz-menu-item>

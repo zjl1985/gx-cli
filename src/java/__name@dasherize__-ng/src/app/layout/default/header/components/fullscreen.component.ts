@@ -4,7 +4,7 @@ import * as screenfull from 'screenfull';
 @Component({
   selector: 'header-fullscreen',
   template: `
-    <i class="anticon anticon-{{status ? 'shrink' : 'arrows-alt'}}"></i>
+    <i nz-icon type="{{status ? 'shrink' : 'arrows-alt'}}"></i>
     {{(status ? 'fullscreen-exit' : 'fullscreen') | translate }}
   `,
   host: {
@@ -14,15 +14,19 @@ import * as screenfull from 'screenfull';
 export class HeaderFullScreenComponent {
   status = false;
 
+  private get sf(): screenfull.Screenfull {
+    return screenfull as screenfull.Screenfull;
+  }
+
   @HostListener('window:resize')
   _resize() {
-    this.status = screenfull.isFullscreen;
+    this.status = this.sf.isFullscreen;
   }
 
   @HostListener('click')
   _click() {
-    if (screenfull.enabled) {
-      screenfull.toggle();
+    if (this.sf.enabled) {
+      this.sf.toggle();
     }
   }
 }

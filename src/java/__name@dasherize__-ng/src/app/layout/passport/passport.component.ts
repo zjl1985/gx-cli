@@ -31,7 +31,7 @@ export class LayoutPassportComponent {
     this.loginInfo.title = '';
     this.loginInfo.desc = '';
     this.loginInfo.company = '';
-    this.http.get('assets/tmp/login-info.json').subscribe((data: LoginInfo) => {
+    this.http.get('assets/resources/login-info.json').subscribe((data: LoginInfo) => {
       if (data.title) this.loginInfo.title = data.title;
       if (data.desc) this.loginInfo.desc = data.desc;
       if (data.company) this.loginInfo.company = data.company;

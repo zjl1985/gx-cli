@@ -401,3 +401,6 @@ typings/
 
 *.rdb
 
+/release
+
+/release/*
