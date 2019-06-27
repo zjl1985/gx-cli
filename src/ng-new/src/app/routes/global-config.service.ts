@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class GlobalConfigService {
   private _globalPath: string;
   constructor() {
-    this._globalPath = '/province';
+    this._globalPath = '/<%= dasherize(name) %>';
   }
 
   public get globalPath() {

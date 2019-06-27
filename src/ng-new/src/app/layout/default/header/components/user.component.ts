@@ -9,16 +9,27 @@ import { changePassWordComponent } from '../changePassWord/changePassWord.compon
 @Component({
   selector: 'header-user',
   template: `
-  <nz-dropdown nzPlacement="bottomRight">
-    <div class="alain-default__nav-item d-flex align-items-center px-sm" nz-dropdown>
-      <nz-avatar [nzSrc]="settings.user.avatar" nzSize="small" class="mr-sm"></nz-avatar>
-      {{settings.user.name}}
-    </div>
-    <div nz-menu class="width-sm">
-      <div nz-menu-item (click)="changPwd()"><i class="anticon anticon-form mr-sm"></i>修改密码</div>
-      <div nz-menu-item (click)="logout()"><i class="anticon anticon-setting mr-sm"></i>退出登录</div>
-    </div>
-  </nz-dropdown>
+    <nz-dropdown nzPlacement="bottomRight">
+      <div
+        class="alain-default__nav-item d-flex align-items-center px-sm"
+        nz-dropdown
+      >
+        <nz-avatar
+          [nzSrc]="settings.user.avatar"
+          nzSize="small"
+          class="mr-sm"
+        ></nz-avatar>
+        {{ settings.user.name }}
+      </div>
+      <div nz-menu class="width-sm">
+        <div nz-menu-item (click)="changPwd()">
+          <i nz-icon nzType="form" nzTheme="outline"></i>修改密码
+        </div>
+        <div nz-menu-item (click)="logout()">
+          <i nz-icon nzType="logout" nzTheme="outline"></i>退出登录
+        </div>
+      </div>
+    </nz-dropdown>
   `,
 })
 export class HeaderUserComponent {
@@ -27,8 +38,8 @@ export class HeaderUserComponent {
     private router: Router,
     @Inject(DA_SERVICE_TOKEN) private tokenService: ITokenService,
     private http: HttpClient,
-    private modalService: NzModalService) {
-  }
+    private modalService: NzModalService,
+  ) {}
 
   logout() {
     this.http.get('/xinhai/logout');
@@ -41,7 +52,7 @@ export class HeaderUserComponent {
     this.modalService.create({
       nzTitle: '修改密码：',
       nzContent: changePassWordComponent,
-      nzFooter: null
+      nzFooter: null,
     });
   }
 }

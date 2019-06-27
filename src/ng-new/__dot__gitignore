@@ -44,5 +44,3 @@ yarn-error.log
 Thumbs.db
 
 dist.zip
-dist.tar.gz
-yarn.lock

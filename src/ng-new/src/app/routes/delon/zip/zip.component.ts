@@ -27,7 +27,7 @@ export class ZipComponent {
   }
 
   url() {
-    this.zip.read(`./assets/tmp/demo.zip`).then(res => this.format(res));
+    this.zip.read(`./assets/resources/demo.zip`).then(res => this.format(res));
   }
 
   change(e: Event) {

@@ -24,6 +24,7 @@ import { SettingDrawerComponent } from './setting-drawer/setting-drawer.componen
 import { Subscription } from 'rxjs';
 import { updateHostClass } from '@delon/util';
 import { ScrollService, MenuService, SettingsService } from '@delon/theme';
+declare var G2:any;
 
 // #region icons
 
@@ -155,6 +156,155 @@ export class LayoutDefaultComponent
   ngOnInit() {
     this.notify$ = this.settings.notify.subscribe(() => this.setClass());
     this.setClass();
+    //设置G2主题
+    const theme = G2.Util.deepMix({  
+      colors:[
+      "#27cffe",
+      "#53e59e",
+      "#ffc954",
+      "#ff7575",
+      "#a992fc",
+      "#88e3fc",
+      "#88c2fc",
+      "#aac0ff"],
+      colors_16: [
+        "#27cffe",
+        "#53e59e",
+        "#ffc954",
+        "#ff7575",
+        "#a992fc",
+        "#88e3fc",
+        "#88c2fc",
+        "#aac0ff"],
+      colors_24: [
+        "#27cffe",
+        "#53e59e",
+        "#ffc954",
+        "#ff7575",
+        "#a992fc",
+        "#88e3fc",
+        "#88c2fc",
+        "#aac0ff"],
+      colors_pie: [
+        "#27cffe",
+        "#53e59e",
+        "#ffc954",
+        "#ff7575",
+        "#a992fc",
+        "#88e3fc",
+        "#88c2fc",
+        "#aac0ff"],
+      colors_pie_16: [
+        "#27cffe",
+        "#53e59e",
+        "#ffc954",
+        "#ff7575",
+        "#a992fc",
+        "#88e3fc",
+        "#88c2fc",
+        "#aac0ff"],
+      axis:{
+        left:{
+          line:{
+            stroke: '#fff'
+          },
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        },
+        bottom:{
+          line:{
+            stroke: '#fff'
+          },
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        },
+        right:{
+          line:{
+            stroke: '#fff'
+          },
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        }
+        ,
+        top:{
+          line:{
+            stroke: '#fff'
+          },
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        },
+        circle:{
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        },
+        radius:{
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        },
+        helix:{
+          line:{
+            stroke: '#fff'
+          },
+          label:{
+            textStyle:{
+              fill:"#fff"
+            }
+          }
+        }      
+      },
+      legend:{
+        right:{
+          textStyle:{
+            fill:"#fff"
+          },
+          unCheckColor: '#fff'
+        },
+        left:{
+          textStyle:{
+            fill:"#fff"
+          },
+          unCheckColor: '#fff'
+        },
+        top:{
+          textStyle:{
+            fill:"#fff"
+          },
+          unCheckColor: '#fff'
+        },
+        bottom:{
+          textStyle:{
+            fill:"#fff"
+          },
+          unCheckColor: '#fff'
+        }
+      },
+      label: {
+        textStyle: {
+          fill: '#fff'
+        }
+      }
+      // 具体的配置项详见 api/global.html
+    }, G2.Theme);
+    // console.log(G2.Global);
+    G2.Global.setTheme(theme);
   }
 
   ngOnDestroy() {

@@ -2209,7 +2209,7 @@ Tabs
   color: #ff2a2a;
   opacity: 1; }
 
- ._jsTree {
+._jsTree {
   color: #70BDFB; }
 
 .jstree-anchor {
@@ -2222,7 +2222,7 @@ Tabs
 .jstree-default .jstree-node:not(.jstree-checkbox), .jstree-default .jstree-icon:not(.jstree-checkbox) {
   background-image: none; }
 
-/* .jstree-node.jstree-open > .jstree-icon.jstree-ocl:not(.jstree-checkbox):before {
+.jstree-node.jstree-open > .jstree-icon.jstree-ocl:not(.jstree-checkbox):before {
   content: "\e615";
   font-family: "simple-line-icons";
   font-style: normal;
@@ -2240,10 +2240,10 @@ Tabs
 
 .jstree-node.jstree-open > a > .jstree-icon:not(.jstree-checkbox):before {
   content: "\f07c";
-  font-family: FontAwesome; } */
+  font-family: FontAwesome; }
 
 .jstree-default .jstree-wholerow-clicked, .jstree-wholerow .jstree-wholerow-clicked {
-  background-color: #beebff; } 
+  background-color: #beebff; }
 
 .vakata-context li > a > i {
   margin: 0; }

@@ -3,4 +3,3 @@
 // you can still use it by manually adding typings for it
 declare var $: any;
 declare var moment: any;
-declare var _:any;
