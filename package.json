@@ -1,6 +1,6 @@
 {
   "name": "gaoxin-cli",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "高信ng的脚手架",
   "author": "zhangjunlong<zjl198544@163.com>",
   "repository": {
@@ -11,17 +11,12 @@
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
-  "keywords": [
-    "schematics"
-  ],
+  "bin": {
+    "gaoxin": "./bin/go.js"
+  },
   "license": "MIT",
-  "schematics": "./src/collection.json",
   "dependencies": {
-    "@angular-devkit/core": "^7.2.1",
-    "@angular-devkit/schematics": "^7.2.1",
-    "@types/jasmine": "^3.3.10",
-    "@types/node": "^8.0.31",
-    "jasmine": "^3.3.1",
-    "typescript": "~3.2.2"
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0"
   }
 }
