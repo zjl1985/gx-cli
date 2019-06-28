@@ -12,11 +12,16 @@
     "test": "npm run build && jasmine src/**/*_spec.js"
   },
   "bin": {
-    "gaoxin": "./bin/go.js"
+    "gaoxin": "./go.js"
   },
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.4.2",
-    "commander": "^2.20.0"
+    "commander": "^2.20.0",
+    "dasherize": "^2.0.0",
+    "inquirer": "^6.4.1",
+    "os": "^0.1.1",
+    "replace-in-file": "^4.1.0",
+    "walk": "^2.3.14"
   }
 }
