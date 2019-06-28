@@ -159,6 +159,11 @@ external-editor@^3.0.3:
     iconv-lite "^0.4.24"
     tmp "^0.0.33"
 
+figlet@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npm.taobao.org/figlet/download/figlet-1.2.3.tgz#7d25df546f41fc411c2a8b88012d48d55de72129"
+  integrity sha1-fSXfVG9B/EEcKouIAS1I1V3nISk=
+
 figures@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/figures/-/figures-2.0.0.tgz#3ab1a2d2a62c8bfb431a0c94cb797a2fce27c962"
@@ -459,8 +464,8 @@ pump@^3.0.0:
 
 replace-in-file@^4.1.0:
   version "4.1.0"
-  resolved "https://registry.npmjs.org/replace-in-file/-/replace-in-file-4.1.0.tgz#07846245a4b98a8bc5f5f9c3e3e368fa12b18bf7"
-  integrity sha512-5IANGPAQZVO9PHEjaRz3EHs7eQulv1cvOu2hRi7+Ern+zXIzdslSGX9MIfcI1anaGCpICK2l4R4YOOdThsFryQ==
+  resolved "https://registry.npm.taobao.org/replace-in-file/download/replace-in-file-4.1.0.tgz#07846245a4b98a8bc5f5f9c3e3e368fa12b18bf7"
+  integrity sha1-B4RiRaS5iovF9fnD4+No+hKxi/c=
   dependencies:
     chalk "^2.4.2"
     glob "^7.1.3"

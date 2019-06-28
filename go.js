@@ -1,5 +1,4 @@
 #! /usr/bin/env node
-
 const program = require('commander');
 const chalk = require('chalk');
 const log = console.log;
@@ -8,8 +7,8 @@ const inquirer = require('inquirer');
 const dasherize = require('dasherize');
 const walk = require('walk');
 const fs = require('fs-extra');
-let files = [];
-
+const replace = require('replace-in-file');
+const figlet = require('figlet');
 program
   .version('0.0.1', '-v, --version')
   .command('new')
@@ -51,9 +50,21 @@ program
           whenJava(answer.name);
         }
       })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err);
+        console.error(chalk.red('出大事了!'));
+      });
   });
 program.parse(process.argv);
+figlet('gaoxin-cli', function(err, data) {
+  if (err) {
+    console.log('Something went wrong...');
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+  program.outputHelp();
+});
 
 function whenJava(name) {
   walker = walk.walk('src/java', { followLinks: false });
@@ -65,22 +76,19 @@ function whenJava(name) {
     });
   });
   walker.on('directories', function(root, dirStatsArray, next) {
-    // dirStatsArray is an array of `stat` objects with the additional attributes
-    // * type
-    // * error
-    // * name
-
     next();
   });
   walker.on('file', function(root, fileStats, next) {
-    const target = `../${name}/${root.replace(/^src\/java\\|^src\/java/, '')}/${
-      fileStats.name
-    }`;
+    const path = root
+      .replace(/^src\/java\\|^src\/java/, '')
+      .replace('__name__', dasherize(name));
+    const target = `../${name}/${path}/${fileStats.name}`;
     fs.copy(`${root}/${fileStats.name}`, target)
       .then(() => {
         log(target);
       })
       .catch(err => {
+        console.error(chalk.red('出大事了!'));
         throw err;
       });
     // log(root);
@@ -91,6 +99,27 @@ function whenJava(name) {
   });
 
   walker.on('end', function() {
-    console.log('all done');
+    const options = {
+      files: `../${dasherize(name)}/**/**`,
+      from: /{{{name}}}/g,
+      to: dasherize(name),
+      ignore: '**/assets/**',
+    };
+    replace(options)
+      .then(results => {
+        console.log(chalk.green('项目创建成功!你可以使用了!'));
+        figlet('Enjoy', function(err, data) {
+          if (err) {
+            console.log('Something went wrong...');
+            console.dir(err);
+            return;
+          }
+          console.log(data);
+        });
+      })
+      .catch(err => {
+        console.error(chalk.red('出大事了!'));
+        throw err;
+      });
   });
 }

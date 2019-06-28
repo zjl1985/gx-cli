@@ -1,5 +1,5 @@
 {
-  "name": "<%= dasherize(name) %>",
+  "name": "{{{name}}}",
   "version": "2.0.0",
   "author": "高校信息产业股份有限公司",
   "homepage": "http://www.gaoxiaoit.com",

@@ -1,5 +1,5 @@
 {
-  "name": "<%= dasherize(name) %>-ng",
+  "name": "{{{name}}}-ng",
   "version": "1.0.0",
   "description": "",
   "author": "zhangjunlong",

@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xinhai</groupId>
-    <artifactId><%= dasherize(name) %></artifactId>
+    <artifactId>{{{name}}}</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module><%= dasherize(name) %>-api</module>
-        <module><%= dasherize(name) %>-business</module>
-        <module><%= dasherize(name) %>-web</module>
+        <module>{{{name}}}-api</module>
+        <module>{{{name}}}-business</module>
+        <module>{{{name}}}-web</module>
     </modules>
 
     <properties>
@@ -27,7 +27,7 @@
         </profile>
     </profiles>
 
-    <name><%= dasherize(name) %></name>
+    <name>{{{name}}}</name>
     <developers>
         <developer>
             <name>zhangjunlong</name>
