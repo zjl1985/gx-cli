@@ -1,40 +1,23 @@
-(function() {
-  'use strict';
-
-  var walk = require('walk');
-  var fs = require('fs');
-  var options;
-  var walker;
-
-  // To be truly synchronous in the emitter and maintain a compatible api,
-  // the listeners must be listed before the object is created
-  options = {
-    listeners: {
-      names: function(root, nodeNamesArray) {
-        nodeNamesArray.sort(function(a, b) {
-          if (a > b) return 1;
-          if (a < b) return -1;
-          return 0;
+const program = require('commander');
+const fs = require('fs');
+program
+  .command('list') //声明hi下有一个命令叫list
+  .description('list files in current working directory') //给出list这个命令的描述
+  .option('-a, --all', 'Whether to display hidden files') //设置list这个命令的参数
+  .action(function(options) {
+    //list命令的实现体
+    var fs = require('fs');
+    //获取当前运行目录下的文件信息
+    fs.readdir(process.cwd(), function(err, files) {
+      var list = files;
+      if (!options.all) {
+        //检查用户是否给了--all或者-a的参数，如果没有，则过滤掉那些以.开头的文件
+        list = files.filter(function(file) {
+          return file.indexOf('.') !== 0;
         });
-      },
-      directories: function(root, dirStatsArray, next) {
-        // dirStatsArray is an array of `stat` objects with the additional attributes
-        // * type
-        // * error
-        // * name
+      }
+      console.log(list.join('\n\r')); //控制台将所有文件名打印出来
+    });
+  });
 
-        next();
-      },
-      file: function(root, fileStats, next) {
-        console.log(root,fileStats.name);
-      },
-      errors: function(root, nodeStatsArray, next) {
-        next();
-      },
-    },
-  };
-
-  walker = walk.walkSync('./src/java', options);
-
-  console.log('all done');
-})();
+program.parse(process.argv);
