@@ -1,6 +1,6 @@
 {
   "name": "gaoxin-cli",
-  "version": "0.0.1",
+  "version": "2.0.0",
   "description": "高信ng的脚手架",
   "author": "zhangjunlong<zjl198544@163.com>",
   "repository": {
@@ -9,7 +9,8 @@
   },
   "scripts": {
     "test": "npm run build && jasmine src/**/*_spec.js",
-    "postinstall": "gaoxin update"
+    "postinstall": "node gaoxin.js init",
+    "pub": "npm publish --registry http://172.72.100.37:13420/repository/gaoxin-npm/"
   },
   "bin": {
     "gaoxin": "./gaoxin.js"

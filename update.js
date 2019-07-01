@@ -16,7 +16,17 @@ const clone = async function() {
   });
 };
 
-const update = async function() {
+const update = function() {
+  const pull = exec('git status', { cwd: './resource' } /* ... */);
+  pull.stdout.on('data', data => {
+    console.log(data.toString());
+  });
+  pull.stderr.on('data', data => {
+    console.log(data.toString());
+  });
+};
+
+const init = async function() {
   await fs.ensureDir('./resource');
   const exists = await fs.pathExists('./resource/.git');
   if (exists === true) {
@@ -34,4 +44,4 @@ const update = async function() {
   }
 };
 
-module.exports = { update };
+module.exports = { update, init };

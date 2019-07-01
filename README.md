@@ -1,39 +1,23 @@
 # 使用说明
 
-## 前提
+## V2.0.0
 
-安装最新的angular-cli,本工具依赖版本必须大于7.2.3
+cli升级2.0.0啦😊
 
-`npm install -g nrm`
+> - 移除了对angular的依赖 👍
+> - 使用`commander`作为底层框架 🎁
+> - 命令更加简单了😄
+> - 项目资源从git获取,减小了安装包的大小🙂
 
-`nrm use taobao`
+## 安装
 
-`npm install -g @angular/cli`
+`npm install -g gaoxin-cli`
 
-## 先安装
+## 使用
 
-`npm i -g gaoxin-cli`
+`gaoxin version`
+可以获取当前版本号
 
-## 然后就可以用咯
+`gaoxin new`
 
-`ng new my-app -c=gaoxin-cli --type=ng`
-
-or
-
-`ng new my-app -c=gaoxin-cli --type=java`
-
-or
-
-`ng new my-app -c=gaoxin-cli --type=ionic3`
-
-or
-
-`ng new my-app -c=gaoxin-cli --type=ionic4`
-
-## 或者直接
-
-`ng new -c=gaoxin-cli`
-
-会让你输入项目的名称和类型
-
-不要用中文！！！
+之后按照步骤创建项目即可
