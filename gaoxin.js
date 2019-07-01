@@ -9,12 +9,12 @@ const walk = require('walk');
 const fs = require('fs-extra');
 const replace = require('replace-in-file');
 const figlet = require('figlet');
-const { clone, update } = require('./update');
+const { update } = require('./update');
 program.version('0.0.1', '-v, --version');
 program
   .command('update')
   .description('更新')
-  .action(function(options) {
+  .action(async function(options) {
     update();
   });
 program

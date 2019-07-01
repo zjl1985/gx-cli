@@ -1,8 +1,11 @@
 const { exec } = require('child_process');
-
-const clone = function() {
+const fs = require('fs-extra');
+const clone = async function() {
+  await fs.emptyDir('./resource');
+  console.log('清理文件夹成功');
   const clone = exec(
-    'git clone http://172.72.100.37:13530/SoftwareDevelopment/gaoxin-cli-resource.git ./resource'
+    'git clone http://172.72.100.37:13530/SoftwareDevelopment/gaoxin-cli-resource.git ./',
+    { cwd: './resource' } /* ... */
   );
   clone.stdout.on('data', data => {
     console.log(data.toString());
@@ -13,16 +16,22 @@ const clone = function() {
   });
 };
 
-const update = function() {
-  const pull = exec('git pull', { cwd: './resource' });
+const update = async function() {
+  await fs.ensureDir('./resource');
+  const exists = await fs.pathExists('./resource/.git');
+  if (exists === true) {
+    const pull = exec('git status', { cwd: './resource' } /* ... */);
 
-  pull.stdout.on('data', data => {
-    console.log(data.toString());
-  });
-  //git clone http://172.72.100.37:13530/SoftwareDevelopment/gaoxin-cli-resource.git ./resource
-  pull.stderr.on('data', data => {
-    console.log(data.toString());
-  });
+    pull.stdout.on('data', data => {
+      console.log(data.toString());
+    });
+    //git clone http://172.72.100.37:13530/SoftwareDevelopment/gaoxin-cli-resource.git ./resource
+    pull.stderr.on('data', data => {
+      console.log(data.toString());
+    });
+  } else {
+    await clone();
+  }
 };
 
-module.exports = { clone, update };
+module.exports = { update };

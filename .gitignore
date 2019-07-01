@@ -21,3 +21,6 @@ package-lock.json
 .project
 
 *.tgz
+
+
+resource/
