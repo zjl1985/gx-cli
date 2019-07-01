@@ -8,11 +8,11 @@
     "url": "http://172.72.100.37:13530/xinhaiplatform/gx-cli.git"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "test": "npm run build && jasmine src/**/*_spec.js"
+    "test": "npm run build && jasmine src/**/*_spec.js",
+    "postinstall": "gaoxin update"
   },
   "bin": {
-    "gaoxin": "./go.js"
+    "gaoxin": "./gaoxin.js"
   },
   "license": "MIT",
   "dependencies": {
