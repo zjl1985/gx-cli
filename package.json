@@ -1,11 +1,15 @@
 {
   "name": "gaoxin-cli",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "高信ng的脚手架",
   "author": "zhangjunlong<zjl198544@163.com>",
   "repository": {
     "type": "git",
     "url": "http://172.72.100.37:13530/xinhaiplatform/gx-cli.git"
+  },
+  "bugs": {
+    "url": "http://172.72.100.37:13530/xinhaiplatform/gx-cli/issues",
+    "email": "zjl198544@163.com"
   },
   "scripts": {
     "test": "npm run build && jasmine src/**/*_spec.js",

@@ -20,8 +20,8 @@ program
 program
   .command('update')
   .description('更新项目资源')
-  .action(function(options) {
-    update();
+  .action(async function(options) {
+    await update();
   });
 program
   .command('new')

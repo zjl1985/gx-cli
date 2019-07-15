@@ -16,8 +16,8 @@ const clone = async function() {
   });
 };
 
-const update = function() {
-  const pull = exec('git status', { cwd: './resource' } /* ... */);
+const update = async function() {
+  const pull = exec('git pull', { cwd: './resource' } /* ... */);
   pull.stdout.on('data', data => {
     console.log(data.toString());
   });
@@ -30,15 +30,7 @@ const init = async function() {
   await fs.ensureDir('./resource');
   const exists = await fs.pathExists('./resource/.git');
   if (exists === true) {
-    const pull = exec('git status', { cwd: './resource' } /* ... */);
-
-    pull.stdout.on('data', data => {
-      console.log(data.toString());
-    });
-    //git clone http://172.72.100.37:13530/SoftwareDevelopment/gaoxin-cli-resource.git ./resource
-    pull.stderr.on('data', data => {
-      console.log(data.toString());
-    });
+    await update();
   } else {
     await clone();
   }
