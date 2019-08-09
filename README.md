@@ -11,6 +11,12 @@ cli升级2.0.0啦😊
 
 ## 安装
 
+`npm install -g nrm`
+
+`nrm add gxnpm http://172.72.100.37:13420/repository/gxnpm/`
+
+`nrm use gxnpm`
+
 `npm install -g gaoxin-cli`
 
 ## 使用
